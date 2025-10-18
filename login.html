@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Log In • AI Study Assistant</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/js/auth.js" defer></script>
+</head>
+<body data-page="login">
+  <header class="top-bar">
+    <div class="logo">AI Study Assistant</div>
+    <nav class="nav-links" data-nav-links>
+      <a href="/signup.html">Sign Up</a>
+      <a href="/index.html">Home</a>
+    </nav>
+  </header>
+  <main class="main-content form-page">
+    <section class="form-card">
+      <h1>Welcome back</h1>
+      <form id="login-form" class="form">
+        <label>
+          Email
+          <input name="email" type="email" required autocomplete="email">
+        </label>
+        <label>
+          Password
+          <input name="password" type="password" required autocomplete="current-password">
+        </label>
+        <button class="btn primary" type="submit">Log In</button>
+      </form>
+      <p class="switch-link">New here? <a href="/signup.html">Create an account</a>.</p>
+    </section>
+    <section class="ad-banner narrow">
+      <h2>Sponsored</h2>
+      <iframe title="Adsterra Banner" src="https://ads.adsterra.com/banner?pid=YOUR_PLACEMENT_ID" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+  </main>
+  <footer class="footer">
+    <span>&copy; <span data-year></span> AI Study Assistant</span>
+  </footer>
+</body>
+</html>

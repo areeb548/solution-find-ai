@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard • AI Study Assistant</title>
+  <link rel="stylesheet" href="/style.css">
+  <script type="module" src="/js/dashboard.js" defer></script>
+</head>
+<body data-page="dashboard">
+  <header class="top-bar">
+    <div class="logo">AI Study Assistant</div>
+    <nav class="nav-links" data-nav-links>
+      <button class="btn secondary" id="logout-btn" type="button">Log Out</button>
+    </nav>
+  </header>
+  <main class="main-content dashboard-layout">
+    <section class="question-form">
+      <div>
+        <h1>Ask a question</h1>
+        <p class="text-muted">Provide as much detail as you can. Optionally attach an image.</p>
+      </div>
+      <form id="question-form" class="form" enctype="multipart/form-data">
+        <label>
+          Subject
+          <select name="subject" required>
+            <option value="">Choose subject</option>
+            <option value="mathematics">Mathematics</option>
+            <option value="science">Science</option>
+            <option value="history">History</option>
+            <option value="language">Language Arts</option>
+            <option value="technology">Technology</option>
+            <option value="other">Other</option>
+          </select>
+        </label>
+        <label>
+          Question
+          <textarea name="question" placeholder="Type your question here..." required></textarea>
+        </label>
+        <label>
+          Supporting image (optional)
+          <input name="image" type="file" accept="image/png,image/jpeg">
+        </label>
+        <div id="preview-container"></div>
+        <button class="btn primary" type="submit">Send to AI</button>
+        <div id="form-status" aria-live="polite"></div>
+      </form>
+    </section>
+    <section class="feed" id="feed">
+      <h2>Recent answers</h2>
+      <div id="feed-content"></div>
+      <div class="ad-banner narrow">
+        <h2>Sponsored</h2>
+        <iframe title="Adsterra Banner" src="https://ads.adsterra.com/banner?pid=YOUR_PLACEMENT_ID" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <span>&copy; <span data-year></span> AI Study Assistant</span>
+  </footer>
+</body>
+</html>
